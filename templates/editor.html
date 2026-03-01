@@ -13,6 +13,7 @@
 
 		<h2>Edit Existing Items</h2>
 		{% for idx, item in items %}
+
 		<form method="post" action="/edit/{{ idx }}">
 			<div class="edit-section">
 				<table class="edit-table">
@@ -32,12 +33,12 @@
 			</div>
 
 			<!-- Save button -->
-			<button class="edit-button" type="submit">Save Updates {{ idx+1 }}</button>
+			<button class="edit-button" type="submit">&check; &nbsp; Save Updates {{ idx+1 }}</button>
 		</form>
 
 		<!-- Delete button, points to separate route, MUST BE OUTSIDE OF EDIT FORM -->
 		<form method="post" action="/delete/{{ idx }}" style="display: inline">
-			<button class="delete-button" type="submit" onclick="return confirm('Are you sure you want to delete entry name: {{ item.get('title', 'Unknown') }} ?');">Delete Item {{ item.get('title', 'Unknown') }}</button>
+			<button class="delete-button" type="submit" onclick="return confirm('Are you sure you want to delete entry name: {{ item.get('title', 'Unknown') }} ?');">&#x2715; &nbsp; Delete Item {{ item.get('title', 'Unknown') }}</button>
 		</form>
 		<hr />
 		{% endfor %}
