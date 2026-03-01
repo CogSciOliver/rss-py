@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add New RSS Item</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+form {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 10px 20px;
+    max-width: 900px;
+}
+label {
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+    align-self: center;
+}
+input[type="text"], textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+textarea {
+    resize: vertical;
+}
+input[type="submit"] {
+    grid-column: 2 / 3;
+    width: 150px;
+    padding: 8px;
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<h2>Add New RSS Item</h2>
+<form method="POST" action="/add">
+    <!-- Basic RSS fields -->
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description" rows="4" required></textarea>
+
+    <label for="link">Link</label>
+    <input type="text" id="link" name="link">
+
+    <label for="guid">GUID</label>
+    <input type="text" id="guid" name="guid">
+
+    <label for="dc_creator">DC Creator</label>
+    <input type="text" id="dc_creator" name="dc_creator">
+
+    <label for="pubDate">Publication Date</label>
+    <input type="text" id="pubDate" name="pubDate" placeholder="e.g., Fri, 16 Sep 2022 20:00:16 GMT">
+
+    <!-- Enclosure -->
+    <label for="enclosure_url">Enclosure URL</label>
+    <input type="text" id="enclosure_url" name="enclosure_url">
+
+    <label for="enclosure_length">Enclosure Length</label>
+    <input type="text" id="enclosure_length" name="enclosure_length">
+
+    <label for="enclosure_type">Enclosure Type</label>
+    <input type="text" id="enclosure_type" name="enclosure_type">
+
+    <!-- iTunes fields -->
+    <label for="itunes_summary">iTunes Summary</label>
+    <textarea id="itunes_summary" name="itunes_summary" rows="3"></textarea>
+
+    <label for="itunes_explicit">iTunes Explicit</label>
+    <input type="text" id="itunes_explicit" name="itunes_explicit" placeholder="Yes or No">
+
+    <label for="itunes_duration">iTunes Duration</label>
+    <input type="text" id="itunes_duration" name="itunes_duration" placeholder="HH:MM:SS">
+
+    <label for="itunes_season">iTunes Season</label>
+    <input type="text" id="itunes_season" name="itunes_season">
+
+    <label for="itunes_episode">iTunes Episode</label>
+    <input type="text" id="itunes_episode" name="itunes_episode">
+
+    <label for="itunes_episodeType">iTunes Episode Type</label>
+    <input type="text" id="itunes_episodeType" name="itunes_episodeType">
+
+    <label for="itunes_image">iTunes Image URL</label>
+    <input type="text" id="itunes_image" name="itunes_image" placeholder="https://example.com/image.jpg">
+
+    <input type="submit" value="Add Item">
+</form>
+</body>
+</html>

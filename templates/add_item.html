@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Add New RSS Item</title>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='style.css') }}"
+		/>
+	</head>
+	<body>
+		<h1>Add New RSS Item</h1>
+
+		<form
+			method="post"
+			action="/add"
+		>
+			<table class="add-item-table">
+				<tr>
+					<td>Title</td>
+					<td>
+						<input
+							type="text"
+							id="title"
+							name="title"
+							required
+							placeholder="Title limit 60 Characters"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>Description</td>
+					<td>
+						<textarea
+							id="description"
+							name="description"
+							rows="4"
+							required
+							placeholder="Add episode long description or show notes here."
+						></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>Link</td>
+					<td>
+						<input
+							type="text"
+							id="link"
+							name="link"
+							placeholder="URL To...."
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>GUID</td>
+					<td>
+						<input
+							type="text"
+							name="guid"
+							disabled
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>dc:creator</td>
+					<td>
+						<input
+							type="text"
+							name="dc:creator"
+							value="Unschool Pages of Our Lives, Danii Oliver"
+							disabled
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						PubDate <br /><i>Day, DD Mon YYYY HH:MM:SS GMT</i><br />
+						<i>Tues, 14 Nov 2026 10:00:00 GMT</i>
+					</td>
+					<td>
+						<input
+							type="text"
+							name="pubDate"
+							placeholder="e.g. Wed, 26 Feb 2026 10:00:00 GMT"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>Enclosure URL</td>
+					<td>
+						<input
+							type="text"
+							name="enclosure_url"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>Enclosure Length</td>
+					<td>
+						<input
+							type="text"
+							name="enclosure_length"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>Enclosure Type</td>
+					<td>
+						<input
+							type="text"
+							name="enclosure_type"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>iTunes Summary</td>
+					<td><textarea name="itunes_summary"></textarea></td>
+				</tr>
+				<tr>
+					<td>iTunes Explicit (Yes/No)</td>
+					<td>
+						<input
+							type="text"
+							name="itunes_explicit"
+							placeholder="Yes or No"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>iTunes Duration (HH:MM:SS)</td>
+					<td>
+						<input
+							type="text"
+							name="itunes_duration"
+							placeholder="HH:MM:SS"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>iTunes Season #</td>
+					<td>
+						<input
+							type="text"
+							name="itunes_season"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>iTunes Episode #</td>
+					<td>
+						<input
+							type="text"
+							name="itunes_episode"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>iTunes Episode Type (Full, Bonus, Trailer)</td>
+					<td>
+						<input
+							type="text"
+							name="itunes_episodeType"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>iTunes Image Href (http:// or https://) Image Link</td>
+					<td>
+						<input
+							type="text"
+							name="itunes_image"
+							placeholder="https://example.com/image.jpg"
+						/>
+					</td>
+				</tr>
+			</table>
+
+			<button type="submit">Add Item</button>
+		</form>
+
+		<a
+			class="back-link"
+			href="/"
+			>← Back to Editor</a
+		>
+	</body>
+</html>

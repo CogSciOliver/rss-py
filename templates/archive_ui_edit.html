@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Edit RSS Item</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+form {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 10px 20px;
+    max-width: 900px;
+}
+label {
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+    align-self: center;
+}
+input[type="text"], textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+textarea {
+    resize: vertical;
+}
+input[type="submit"] {
+    grid-column: 2 / 3;
+    width: 150px;
+    padding: 8px;
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<h2>Edit RSS Item</h2>
+<form method="POST">
+    <!-- Basic RSS fields -->
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" value="{{ item.find('title').text if item.find('title') is not none else '' }}" required>
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description" rows="4">{{ item.find('description').text if item.find('description') is not none else '' }}</textarea>
+
+    <label for="link">Link</label>
+    <input type="text" id="link" name="link" value="{{ item.find('link').text if item.find('link') is not none else '' }}">
+
+    <label for="guid">GUID</label>
+    <input type="text" id="guid" name="guid" value="{{ item.find('guid').text if item.find('guid') is not none else '' }}">
+
+    <label for="dc_creator">DC Creator</label>
+    <input type="text" id="dc_creator" name="dc_creator" value="{{ item.find('{http://purl.org/dc/elements/1.1/}creator').text if item.find('{http://purl.org/dc/elements/1.1/}creator') is not none else '' }}">
+
+    <label for="pubDate">Publication Date</label>
+    <input type="text" id="pubDate" name="pubDate" value="{{ item.find('pubDate').text if item.find('pubDate') is not none else '' }}">
+
+    <!-- Enclosure -->
+    <label for="enclosure_url">Enclosure URL</label>
+    <input type="text" id="enclosure_url" name="enclosure_url" value="{{ item.find('enclosure').attrib.get('url','') if item.find('enclosure') is not none else '' }}">
+
+    <label for="enclosure_length">Enclosure Length</label>
+    <input type="text" id="enclosure_length" name="enclosure_length" value="{{ item.find('enclosure').attrib.get('length','') if item.find('enclosure') is not none else '' }}">
+
+    <label for="enclosure_type">Enclosure Type</label>
+    <input type="text" id="enclosure_type" name="enclosure_type" value="{{ item.find('enclosure').attrib.get('type','') if item.find('enclosure') is not none else '' }}">
+
+    <!-- iTunes fields -->
+    <label for="itunes_summary">iTunes Summary</label>
+    <textarea id="itunes_summary" name="itunes_summary" rows="3">{{ item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}summary').text if item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}summary') is not none else '' }}</textarea>
+
+    <label for="itunes_explicit">iTunes Explicit</label>
+    <input type="text" id="itunes_explicit" name="itunes_explicit" value="{{ item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}explicit').text if item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}explicit') is not none else '' }}">
+
+    <label for="itunes_duration">iTunes Duration</label>
+    <input type="text" id="itunes_duration" name="itunes_duration" value="{{ item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}duration').text if item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}duration') is not none else '' }}">
+
+    <label for="itunes_season">iTunes Season</label>
+    <input type="text" id="itunes_season" name="itunes_season" value="{{ item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}season').text if item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}season') is not none else '' }}">
+
+    <label for="itunes_episode">iTunes Episode</label>
+    <input type="text" id="itunes_episode" name="itunes_episode" value="{{ item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}episode').text if item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}episode') is not none else '' }}">
+
+    <label for="itunes_episodeType">iTunes Episode Type</label>
+    <input type="text" id="itunes_episodeType" name="itunes_episodeType" value="{{ item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}episodeType').text if item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}episodeType') is not none else '' }}">
+
+    <label for="itunes_image">iTunes Image URL</label>
+    <input type="text" id="itunes_image" name="itunes_image" value="{{ item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}image').attrib.get('href','') if item.find('{http://www.itunes.com/dtds/podcast-1.0.dtd}image') is not none else '' }}">
+
+    <input type="submit" value="Save Changes">
+</form>
+</body>
+</html>

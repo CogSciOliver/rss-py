@@ -1,0 +1,161 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 20px;
+	background: #f9f9f9;
+	color: #333;
+}
+
+h1,
+h2 {
+	color: #2c3e50;
+}
+
+form {
+	margin-bottom: 30px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+td,
+th {
+	border: 1px solid #ddd;
+	padding: 10px;
+	vertical-align: top;
+}
+
+td:first-child {
+	width: 35%; /* Left column: current content */
+	background: #f0f0f0;
+	font-size: 14px;
+	line-height: 1.4em;
+}
+
+td:last-child {
+	width: 65%; /* Right column: editable input */
+}
+
+input,
+textarea {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 6px;
+	font-size: 14px;
+}
+
+textarea {
+	height: 80px;
+}
+
+button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	background: #3498db;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+	border-radius: 4px;
+}
+
+button:hover {
+	background: #2980b9;
+}
+
+hr {
+	margin: 30px 0;
+	border: none;
+	border-top: 1px solid #ccc;
+}
+
+.new-item {
+	background: #eef6fb;
+	padding: 15px;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/**
+    * Responsive adjustments for smaller screens
+    */
+@media (max-width: 768px) {
+	td:first-child,
+	td:last-child {
+		width: 100%;
+		display: block;
+	}
+	table {
+		box-shadow: none;
+	}
+}
+/* Add Item Styles */
+.add-item-table {
+	width: 100%;
+	border-collapse: collapse;
+	background: #fff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-item-table td {
+	border: 1px solid #ddd;
+	padding: 10px;
+	vertical-align: top;
+}
+
+.add-item-table td:first-child {
+	width: 35%;
+	background: #f0f0f0;
+	font-size: 14px;
+	line-height: 1.4em;
+}
+
+.add-item-table td:last-child {
+	width: 65%;
+}
+
+input,
+textarea {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 6px;
+	font-size: 14px;
+}
+
+textarea {
+	height: 80px;
+}
+
+button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	background: #3498db;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+	border-radius: 4px;
+}
+
+button:hover {
+	background: #2980b9;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+a.back-link {
+	display: inline-block;
+	margin-top: 20px;
+	text-decoration: none;
+	color: #3498db;
+}
+
+a.back-link:hover {
+	text-decoration: underline;
+}
