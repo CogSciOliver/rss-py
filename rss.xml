@@ -29,33 +29,151 @@
       <itunes:category text="Stories for Kids"/>
     </itunes:category>
     <itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/30674591/30674591-1705711056966-43ec54217f94a.jpg"/>
+    <item><title>dsd</title><description>sdsd</description><link></link><guid></guid><pubDate></pubDate><dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator><enclosure url="" length="" type=""/><itunes:summary></itunes:summary><itunes:explicit></itunes:explicit><itunes:duration></itunes:duration><itunes:season></itunes:season><itunes:episode></itunes:episode><itunes:episodeType></itunes:episodeType><itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/30674591/30674591-1705711056966-43ec54217f94a.jpg"/></item><item><title>dsd</title><description>sdsd</description><link/><guid/><pubDate/><dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator><enclosure url="" length="" type=""/><itunes:summary/><itunes:explicit/><itunes:duration/><itunes:season/><itunes:episode/><itunes:episodeType/><itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/30674591/30674591-1705711056966-43ec54217f94a.jpg"/></item><item><title>Title 8</title><description>Title 8</description><link/><guid/><pubDate/><dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator><enclosure url="" length="" type=""/><itunes:summary/><itunes:explicit/><itunes:duration/><itunes:season/><itunes:episode/><itunes:episodeType/><itunes:image href=""/></item><item>
+      <title>Titile 7</title>
+      <description>Titile 7</description>
+      <link>https://podcasters.spotify.com/pod/show/unschoolpagesofourlives/episodes/NEW-Unschool-Pages-Hub-Discussions-e2qvkkb</link>
+      <guid/>
+      <pubDate>Thu, 14 Nov 2024 13:29:18 GMT</pubDate>
+      <dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator>
+      <enclosure url="https://anchor.fm/s/b76e4c9c/podcast/play/94408779/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-10-14%2F389800185-44100-2-9b04943a0654c.mp3" length="Testing" type="Testing"/>
+      <itunes:summary>Titile 7</itunes:summary>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:duration>03:04:23</itunes:duration>
+      <itunes:season>7</itunes:season>
+      <itunes:episode>7</itunes:episode>
+      <itunes:episodeType>Bonus</itunes:episodeType>
+      <itunes:image href="http://unschooldicoveries.com/imag.jpg"/>
+    </item>
     <item>
-      <title>Two fdNew</title>
-      <description>One New</description>
-      <link>One New</link>
-      <guid>One New</guid>
-      <pubDate>One New</pubDate>
-      <dc:creator>One New</dc:creator>
-      <enclosure url="One New" length="One New" type="One New"/>
-      <itunes:summary/>
-      <itunes:explicit/>
-      <itunes:duration/>
-      <itunes:season/>
+      <title>Title 6</title>
+      <description>6</description>
+      <link>6</link>
+      <guid/>
+      <pubDate>Thu, 14 Nov 2024 13:29:18 GMT</pubDate>
+      <dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator>
+      <enclosure url="6" length="6" type="6"/>
+      <itunes:summary>6</itunes:summary>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:duration>03:04:23</itunes:duration>
+      <itunes:season>6</itunes:season>
+      <itunes:episode>6</itunes:episode>
+      <itunes:episodeType>One New</itunes:episodeType>
+      <itunes:image href="6"/>
+    </item>
+    <item>
+      <title>Title 5 Names</title>
+      <description>5</description>
+      <link>5</link>
+      <guid/>
+      <pubDate>Thu, 14 Nov 2024 13:29:18 GMT</pubDate>
+      <dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator>
+      <enclosure url="5" length="5" type="5"/>
+      <itunes:summary>5</itunes:summary>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:duration>03:04:23</itunes:duration>
+      <itunes:season>5</itunes:season>
+      <itunes:episode>5</itunes:episode>
+      <itunes:episodeType>Bonus</itunes:episodeType>
+      <itunes:image href="http://unschooldicoveries.com/imag.jpg"/>
+    </item>
+    <item>
+      <title>Testing 4</title>
+      <description>Testing 4</description>
+      <link>Testing 4</link>
+      <guid/>
+      <pubDate>Thu, 14 Nov 2024 13:29:18 GMT</pubDate>
+      <dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator>
+      <enclosure url="https://anchor.fm/s/b76e4c9c/podcast/play/94408779/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-10-14%2F389800185-44100-2-9b04943a0654c.mp3" length="Testing 4" type="Testing 4"/>
+      <itunes:summary>Testing 4</itunes:summary>
+      <itunes:explicit>No 4</itunes:explicit>
+      <itunes:duration>03:04:23</itunes:duration>
+      <itunes:season>4</itunes:season>
+      <itunes:episode>4</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:image href="http://unschooldicoveries.com/imag.jpg"/>
+    </item>
+    <item>
+      <title>Unschool Pages Hub Discussions</title>
+      <description>&lt;p&gt;**NEW** Unschool Pages Hub Discussions:&lt;/p&gt;&#13;
+&lt;p&gt;Dive deeper into the unschooling journey with &lt;strong&gt;Unschool Pages Hub Discussions&lt;/strong&gt;—a new show segment designed specifically for parents. Each episode unpacks practical strategies, real-life experiences, and expert insights to help you navigate and thrive in the world of self-directed learning. From addressing common challenges to sharing inspiring success stories, this is your space to connect, learn, and grow as a supportive guide in your child's learning adventure.&lt;/p&gt;&#13;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&#13;
+&lt;p&gt;In this Episode:&lt;/p&gt;&#13;
+&lt;p&gt;Unschooling is more than an educational choice—it's a lifestyle that celebrates freedom, growth, and creativity. As you embark on or continue this journey, remember: there's no "right way" to unschool, only your family's way.&lt;/p&gt;&#13;
+&lt;p&gt;Together, we're redefining learning. Let's inspire a generation of thinkers, doers, and changemakers—one child, one moment, and one joyful discovery at a time.&lt;/p&gt;&#13;
+      </description>
+      <link>https://podcasters.spotify.com/pod/show/unschoolpagesofourlives/episodes/NEW-Unschool-Pages-Hub-Discussions-e2qvkkb</link>
+      <guid isPermaLink="false">55140aa0-2e56-42d1-82f5-935494a3634d</guid>
+      <dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator>
+      <pubDate>Thu, 14 Nov 2024 13:29:18 GMT</pubDate>
+      <enclosure url="https://anchor.fm/s/b76e4c9c/podcast/play/94408779/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-10-14%2F389800185-44100-2-9b04943a0654c.mp3" length="12734379" type="audio/mpeg"/>
+      <itunes:summary>&lt;p&gt;**NEW** Unschool Pages Hub Discussions:&lt;/p&gt;&#13;
+&lt;p&gt;Dive deeper into the unschooling journey with &lt;strong&gt;Unschool Pages Hub Discussions&lt;/strong&gt;—a new show segment designed specifically for parents. Each episode unpacks practical strategies, real-life experiences, and expert insights to help you navigate and thrive in the world of self-directed learning. From addressing common challenges to sharing inspiring success stories, this is your space to connect, learn, and grow as a supportive guide in your child's learning adventure.&lt;/p&gt;&#13;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&#13;
+&lt;p&gt;In this Episode:&lt;/p&gt;&#13;
+&lt;p&gt;Unschooling is more than an educational choice—it's a lifestyle that celebrates freedom, growth, and creativity. As you embark on or continue this journey, remember: there's no "right way" to unschool, only your family's way.&lt;/p&gt;&#13;
+&lt;p&gt;Together, we're redefining learning. Let's inspire a generation of thinkers, doers, and changemakers—one child, one moment, and one joyful discovery at a time.&lt;/p&gt;&#13;
+      </itunes:summary>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:duration>00:13:15</itunes:duration>
+      <itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/30674591/30674591-1705711056966-43ec54217f94a.jpg"/>
+      <itunes:season>3</itunes:season>
+      <itunes:episodeType>full</itunes:episodeType>
       <itunes:episode/>
-      <itunes:episodeType/>
-      <itunes:image href=""/>
+    </item>
+    <item>
+      <title>Tornado Tales: Sheltering in Place and Staying Safe</title>
+      <description>&lt;p&gt;Signs of a tornado appear, and the KIDO Family gets ready to shelter in place. There's no panic, but hints of stress and wonder are in the air. The children ask their mommy if they're safe from nature's might or if they'll come face to face with a tornado tonight.&lt;/p&gt;
+&lt;p&gt;I'm sure you've noticed storms gathering force, making us suspect someone, somewhere, is giving Earth a makeover this year. We've experienced weather like never before: snowstorms, earthquakes, wildfires, hail, mud from heavy rains, and dust from harmattans. Flooding in some places, tornadoes blowing others away.&lt;/p&gt;
+&lt;p&gt;But today, things got real! A wall of clouds covered our nature view, and our phone alarms wailed. We gathered our boots to bring you the story about being tornado-proof.&lt;/p&gt;
+&lt;p&gt;In this episode, we discuss what we've learned about tornadoes, sheltering in place, the Enhanced Fujita Scale, and following storm chaser trails. We're safe, with our shoes, sweaters, and some games, sitting in the closet, sharing the knowledge we've gained.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Photo &amp;amp; Video Credits&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Video, Graphic Design and Audio by Danii Oliver: https://daniioliver.com &lt;/p&gt;
+&lt;p&gt;Video by Coverr from Pexels: https://www.pexels.com/video/footage-of-tornado-853833/&lt;/p&gt;
+&lt;p&gt;Photo by Manfred Langpap: &lt;a href="https://www.pexels.com/photo/lightning-in-dark-sky-in-countryside-16114057/"&gt;https://www.pexels.com/photo/lightning-in-dark-sky-in-countryside-16114057/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Photo by Kat Smith: &lt;a href="https://www.pexels.com/photo/brown-bare-tree-551615/"&gt;https://www.pexels.com/photo/brown-bare-tree-551615/&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;Photo by Moritz Böing: &lt;a href="https://www.pexels.com/photo/cloudy-sky-846980/"&gt;https://www.pexels.com/photo/cloudy-sky-846980/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Photo by Anton Kudryashov: &lt;a href="https://www.pexels.com/photo/a-lightning-in-the-sky-9861936/"&gt;https://www.pexels.com/photo/a-lightning-in-the-sky-9861936/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Photo by Apoorv Ishan: &lt;a href="https://www.pexels.com/photo/car-window-panel-with-water-droplets-1046397/"&gt;https://www.pexels.com/photo/car-window-panel-with-water-droplets-1046397/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Photo by Pixabay: &lt;a href="https://www.pexels.com/photo/white-and-yellow-cloudy-sky-over-farm-lands-69400/"&gt;https://www.pexels.com/photo/white-and-yellow-cloudy-sky-over-farm-lands-69400/&lt;/a&gt;&lt;br&gt;Photo by Pixabay: &lt;a href="https://www.pexels.com/photo/grass-field-below-clouds-355441/"&gt;https://www.pexels.com/photo/grass-field-below-clouds-355441/&lt;/a&gt;&lt;/p&gt;
+      </description>
+      <link>https://podcasters.spotify.com/pod/show/unschoolpagesofourlives/episodes/Tornado-Tales-Sheltering-in-Place-and-Staying-Safe-e2jtm50</link>
+      <guid isPermaLink="false">746db9c9-e00d-49b4-8972-3dabf195d8e6</guid>
+      <dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator>
+      <pubDate>Tue, 21 May 2024 01:18:45 GMT</pubDate>
+      <enclosure url="https://anchor.fm/s/b76e4c9c/podcast/play/87004768/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-4-21%2F378254566-44100-2-056696c1f2c84.mp3" length="29099571" type="audio/mpeg"/>
+      <itunes:summary>&lt;p&gt;Signs of a tornado appear, and the KIDO Family gets ready to shelter in place. There's no panic, but hints of stress and wonder are in the air. The children ask their mommy if they're safe from nature's might or if they'll come face to face with a tornado tonight.&lt;/p&gt;
+&lt;p&gt;I'm sure you've noticed storms gathering force, making us suspect someone, somewhere, is giving Earth a makeover this year. We've experienced weather like never before: snowstorms, earthquakes, wildfires, hail, mud from heavy rains, and dust from harmattans. Flooding in some places, tornadoes blowing others away.&lt;/p&gt;
+&lt;p&gt;But today, things got real! A wall of clouds covered our nature view, and our phone alarms wailed. We gathered our boots to bring you the story about being tornado-proof.&lt;/p&gt;
+&lt;p&gt;In this episode, we discuss what we've learned about tornadoes, sheltering in place, the Enhanced Fujita Scale, and following storm chaser trails. We're safe, with our shoes, sweaters, and some games, sitting in the closet, sharing the knowledge we've gained.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Photo &amp;amp; Video Credits&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Video, Graphic Design and Audio by Danii Oliver: https://daniioliver.com &lt;/p&gt;
+&lt;p&gt;Video by Coverr from Pexels: https://www.pexels.com/video/footage-of-tornado-853833/&lt;/p&gt;
+&lt;p&gt;Photo by Manfred Langpap: &lt;a href="https://www.pexels.com/photo/lightning-in-dark-sky-in-countryside-16114057/"&gt;https://www.pexels.com/photo/lightning-in-dark-sky-in-countryside-16114057/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Photo by Kat Smith: &lt;a href="https://www.pexels.com/photo/brown-bare-tree-551615/"&gt;https://www.pexels.com/photo/brown-bare-tree-551615/&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;Photo by Moritz Böing: &lt;a href="https://www.pexels.com/photo/cloudy-sky-846980/"&gt;https://www.pexels.com/photo/cloudy-sky-846980/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Photo by Anton Kudryashov: &lt;a href="https://www.pexels.com/photo/a-lightning-in-the-sky-9861936/"&gt;https://www.pexels.com/photo/a-lightning-in-the-sky-9861936/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Photo by Apoorv Ishan: &lt;a href="https://www.pexels.com/photo/car-window-panel-with-water-droplets-1046397/"&gt;https://www.pexels.com/photo/car-window-panel-with-water-droplets-1046397/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Photo by Pixabay: &lt;a href="https://www.pexels.com/photo/white-and-yellow-cloudy-sky-over-farm-lands-69400/"&gt;https://www.pexels.com/photo/white-and-yellow-cloudy-sky-over-farm-lands-69400/&lt;/a&gt;&lt;br&gt;Photo by Pixabay: &lt;a href="https://www.pexels.com/photo/grass-field-below-clouds-355441/"&gt;https://www.pexels.com/photo/grass-field-below-clouds-355441/&lt;/a&gt;&lt;/p&gt;
+      </itunes:summary>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:duration>00:30:18</itunes:duration>
+      <itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/30674591/30674591-1705711056966-43ec54217f94a.jpg"/>
+      <itunes:episodeType>full</itunes:episodeType>
     </item>
     <item>
       <title>Field Trip to the Fort Worth Water Gardens </title>
       <description>Join us for an exciting field trip episode as we visit the Fort Worth Water Gardens! This special outing offers a refreshing escape into one of Texas' most stunning architectural and ecological sites. Listen in as we explore the serene water features, delve into the garden's design, and discover the educational aspects of this urban oasis. Whether you're a nature enthusiast, architecture aficionado, or just looking for a peaceful break from the everyday, this episode is sure to captivate and educate. Don't miss this unique journey with the Unschool Pages of Our Lives podcast!
-</description>
+      </description>
       <link>https://podcasters.spotify.com/pod/show/unschoolpagesofourlives/episodes/Field-Trip-to-the-Fort-Worth-Water-Gardens-e2jeaai</link>
       <guid isPermaLink="false">b57bf207-2722-486d-9f16-53e0c6008db2</guid>
       <dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator>
       <pubDate>Thu, 09 May 2024 00:35:15 GMT</pubDate>
       <enclosure url="https://anchor.fm/s/b76e4c9c/podcast/play/86501138/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2Fexports%2Fb76e4c9c%2F86501138%2F34d28463066a13e268cb33dc77851485.m4a" length="14160777" type="audio/x-m4a"/>
       <itunes:summary>Join us for an exciting field trip episode as we visit the Fort Worth Water Gardens! This special outing offers a refreshing escape into one of Texas' most stunning architectural and ecological sites. Listen in as we explore the serene water features, delve into the garden's design, and discover the educational aspects of this urban oasis. Whether you're a nature enthusiast, architecture aficionado, or just looking for a peaceful break from the everyday, this episode is sure to captivate and educate. Don't miss this unique journey with the Unschool Pages of Our Lives podcast!
-</itunes:summary>
+      </itunes:summary>
       <itunes:explicit>No</itunes:explicit>
       <itunes:duration>00:14:17</itunes:duration>
       <itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/30674591/30674591-1705711056966-43ec54217f94a.jpg"/>
@@ -64,14 +182,14 @@
     <item>
       <title>Storytime: Suspended Part 2 The Best Thing Ever </title>
       <description>&lt;p&gt;It&amp;#39;s StoryTime! Join us on an exciting journey with Jeremy, a young boy whose suspension from school turned into the best thing ever! Dive into his story of exploration and discovery as he embraces the unschooling lifestyle. From flying airplanes to learning about dinosaurs and cooking with his dad, Jeremy&amp;#39;s adventure is a testament to the endless possibilities of self-directed learning. Get inspired to unleash your own potential on this episode of Unschool Pages of Our Lives!&lt;/p&gt;
-</description>
+      </description>
       <link>https://podcasters.spotify.com/pod/show/unschoolpagesofourlives/episodes/Storytime-Suspended-Part-2-The-Best-Thing-Ever-e2i3b94</link>
       <guid isPermaLink="false">1f1abb46-f747-404e-a426-83b4377e7fc5</guid>
       <dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator>
       <pubDate>Mon, 08 Apr 2024 14:44:34 GMT</pubDate>
       <enclosure url="https://anchor.fm/s/b76e4c9c/podcast/play/85093092/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-3-8%2F373620063-44100-2-5fc22e944028b.mp3" length="30394408" type="audio/mpeg"/>
       <itunes:summary>&lt;p&gt;It&amp;#39;s StoryTime! Join us on an exciting journey with Jeremy, a young boy whose suspension from school turned into the best thing ever! Dive into his story of exploration and discovery as he embraces the unschooling lifestyle. From flying airplanes to learning about dinosaurs and cooking with his dad, Jeremy&amp;#39;s adventure is a testament to the endless possibilities of self-directed learning. Get inspired to unleash your own potential on this episode of Unschool Pages of Our Lives!&lt;/p&gt;
-</itunes:summary>
+      </itunes:summary>
       <itunes:explicit>No</itunes:explicit>
       <itunes:duration>00:31:39</itunes:duration>
       <itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/30674591/30674591-1705711056966-43ec54217f94a.jpg"/>
@@ -85,7 +203,7 @@
 &lt;p&gt;Join us on an exciting journey with Jeremy, a young boy whose suspension from school turned into the best thing ever! Dive into his story of exploration and discovery as he embraces the unschooling lifestyle. From flying airplanes to learning about dinosaurs and cooking with his dad, Jeremy&amp;#39;s adventure is a testament to the endless possibilities of self-directed learning. Get inspired to unleash your own potential on this episode of Unschool Pages of Our Lives!&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-</description>
+      </description>
       <link>https://podcasters.spotify.com/pod/show/unschoolpagesofourlives/episodes/Suspended-What-If-Its-the-Best-Thing-Ever-e2hdo7q</link>
       <guid isPermaLink="false">e7d672e0-54f6-4a5f-b0c8-8000ce0e3bb7</guid>
       <dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator>
@@ -97,7 +215,7 @@
 &lt;p&gt;Join us on an exciting journey with Jeremy, a young boy whose suspension from school turned into the best thing ever! Dive into his story of exploration and discovery as he embraces the unschooling lifestyle. From flying airplanes to learning about dinosaurs and cooking with his dad, Jeremy&amp;#39;s adventure is a testament to the endless possibilities of self-directed learning. Get inspired to unleash your own potential on this episode of Unschool Pages of Our Lives!&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-</itunes:summary>
+      </itunes:summary>
       <itunes:explicit>No</itunes:explicit>
       <itunes:duration>00:31:30</itunes:duration>
       <itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/30674591/30674591-1705711056966-43ec54217f94a.jpg"/>
@@ -108,7 +226,7 @@
       <description>&lt;p&gt;We ask Expert natural learning Author and momma Annie Tassani Smith some serious unschool questions that get to the core of our shared genre bending narratives the bridge both fiction and non-fiction memoir literary buckets. We talk about questions we had from the book, go on shared unschool lifestyle tangents and connect on lived experiences we not onlt capture in our books but also have in common even from miles and miles apart. &lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Dive into &amp;quot;We ARE at School&amp;quot; by Annie Tassani Smith &lt;/p&gt;
-</description>
+      </description>
       <link>https://podcasters.spotify.com/pod/show/unschoolpagesofourlives/episodes/Unschooler-Ask-Experts-Questions-Annie-Tassani-Smith-e2h34oj</link>
       <guid isPermaLink="false">de819dcd-2654-4a5b-a108-3bf6eaaa7c07</guid>
       <dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator>
@@ -117,7 +235,7 @@
       <itunes:summary>&lt;p&gt;We ask Expert natural learning Author and momma Annie Tassani Smith some serious unschool questions that get to the core of our shared genre bending narratives the bridge both fiction and non-fiction memoir literary buckets. We talk about questions we had from the book, go on shared unschool lifestyle tangents and connect on lived experiences we not onlt capture in our books but also have in common even from miles and miles apart. &lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Dive into &amp;quot;We ARE at School&amp;quot; by Annie Tassani Smith &lt;/p&gt;
-</itunes:summary>
+      </itunes:summary>
       <itunes:explicit>No</itunes:explicit>
       <itunes:duration>00:33:28</itunes:duration>
       <itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_episode/30674591/30674591-1710433998035-55f9ebd5ac098.jpg"/>
@@ -129,7 +247,7 @@
 
 For more information, visit the author&amp;#39;s page for &amp;quot;We ARE at School&amp;quot; by Annie Tassani Smith here:
 &lt;a href="https://pancakesandsnuggles.com" target="_blank" rel="noopener noreferer"&gt;https://pancakesandsnuggles.com&lt;/a&gt;&lt;/p&gt;
-</description>
+      </description>
       <link>https://podcasters.spotify.com/pod/show/unschoolpagesofourlives/episodes/Storytime-We-ARE-at-School-Read-Aloud-e2gmve9</link>
       <guid isPermaLink="false">90662b1f-75ea-44fe-b5ba-f9310c8ea912</guid>
       <dc:creator>Unschool Pages of Our Lives, Danii Oliver</dc:creator>
@@ -139,7 +257,7 @@ For more information, visit the author&amp;#39;s page for &amp;quot;We ARE at Sc
 
 For more information, visit the author&amp;#39;s page for &amp;quot;We ARE at School&amp;quot; by Annie Tassani Smith here:
 &lt;a href="https://pancakesandsnuggles.com" target="_blank" rel="noopener noreferer"&gt;https://pancakesandsnuggles.com&lt;/a&gt;&lt;/p&gt;
-</itunes:summary>
+      </itunes:summary>
       <itunes:explicit>No</itunes:explicit>
       <itunes:duration>00:50:27</itunes:duration>
       <itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/30674591/30674591-1705711056966-43ec54217f94a.jpg"/>

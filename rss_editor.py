@@ -91,14 +91,14 @@ def edit_item(item_index):
             elem = item.find(tag)
             if elem is None:
                 elem = ET.SubElement(item, tag)
-            elem.text = form.get(f"itunes_{field}", "")
+            elem.text = form.get(f"itunes:{field}", "")
 
         # iTunes image
         tag = f"{{{NS['itunes']}}}image"
         image = item.find(tag)
         if image is None:
             image = ET.SubElement(item, tag)
-        image.set("href", form.get("itunes_image", ""))
+        image.set("href", form.get("itunes:image", ""))
 
         # Save RSS
         tree.write(RSS_FILE, encoding="utf-8", xml_declaration=True, pretty_print=True)
@@ -114,6 +114,8 @@ def delete_item(item_index):
     root = tree.getroot()
     # Find the <channel> element (adjust namespace if needed)
     channel = root.find("channel") or root.find(".//{http://purl.org/rss/1.0/}channel")
+    
+    print("DELETE ROUTE HIT")
     
     if channel is None:
         # Handle error: no channel found
@@ -155,7 +157,7 @@ def add_item():
         # DC creator
         dc_creator_tag = f"{{{NS['dc']}}}creator"
         elem = ET.SubElement(new_item, dc_creator_tag)
-        elem.text = form.get("dc:creator", "")
+        elem.text = form.get("dc:creator", "Unschool Pages of Our Lives, Danii Oliver")
 
         # Enclosure
         ET.SubElement(new_item, "enclosure",
@@ -167,12 +169,12 @@ def add_item():
         for field in ["summary", "explicit", "duration", "season", "episode", "episodeType"]:
             tag = f"{{{NS['itunes']}}}{field}"
             elem = ET.SubElement(new_item, tag)
-            elem.text = form.get(f"itunes_{field}", "")
+            elem.text = form.get(f"itunes:{field}", "") # Set as name attribute in the form's html input
 
         # iTunes image
         tag = f"{{{NS['itunes']}}}image"
         image = ET.SubElement(new_item, tag)
-        image.set("href", form.get("itunes_image", ""))
+        image.set("href", form.get("itunes:image", "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/30674591/30674591-1705711056966-43ec54217f94a.jpg")) # Set as name attribute in the form's html input
 
         # Insert BEFORE the first existing <item> (newest-first)
         first_item = channel.find("item")
@@ -188,4 +190,4 @@ def add_item():
     return render_template("add.html")
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5001)
+    app.run(debug=True, host="0.0.0.0", port=5002)
