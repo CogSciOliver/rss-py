@@ -18,17 +18,16 @@
 			<div class="edit-section">
 				<table class="edit-table">
 					{% for field, value in item.items() %}
-
 					<tr>
 						<td>
 							<strong class="up">{{ field }}</strong><br />
-							<span id="{{ value }}_preview_{{ idx }} previewId">{{ value }}</span>
+							<span id="{{ field }}_preview_{{ idx }}">{{ value }}</span>
 						</td>
 						<td>
 							{% if field in ["description", "itunes:summary", "title"] %}
-							<textarea id="{{ field }}_input_{{ idx }} inputId" name="{{ field }}">{{ value }}</textarea>
+							<textarea id="{{ field }}_input_{{ idx }}" name="{{ field }}">{{ value }}</textarea>
 							{% else %}
-							<input type="text" id="{{ field }}_input_{{ idx }} inputId" name="{{ field }}" value="{{ value }}" />
+							<input type="text" id="{{ field }}_input_{{ idx }}" name="{{ field }}" value="{{ value }}" />
 							{% endif %}
 						</td>
 					</tr>
