@@ -74,14 +74,6 @@ hr {
 	margin-bottom: 30px;
 }
 
-.edit-table {
-	/* SEE TABLE */
-}
-
-.edit-table td {
-	/* SEE TD */
-}
-
 .edit-button {
 	margin-right: 30px;
 	padding: 10px 20px;
@@ -92,7 +84,6 @@ hr {
 	cursor: pointer;
 	font-weight: 500;
 	float: right;
-
 }
 
 .edit-button:hover {
@@ -109,7 +100,6 @@ hr {
 	border-radius: 4px;
 	cursor: pointer;
 	float: right;
-	
 }
 
 .delete-button:hover {
@@ -125,17 +115,6 @@ hr {
 	margin-bottom: 30px;
 }
 
-.add-section h2 {
-}
-
-.add-table {
-	/* SEE TABLE */
-}
-
-.add-table td {
-	/* SEE TD */
-}
-
 .add-button {
 	margin-bottom: 1rem;
 	margin-right: 30px;
@@ -145,7 +124,7 @@ hr {
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
-	float:right;
+	float: right;
 }
 
 .add-button:hover {
@@ -162,8 +141,8 @@ hr {
 	border: 2px solid #2b7cff;
 	border-radius: 4px;
 	cursor: pointer;
-	float:right;
-}	
+	float: right;
+}
 
 .outline-button:hover {
 	background: #2b7cff;
@@ -179,6 +158,8 @@ hr {
 		display: block;
 		width: 100%;
 	}
-	.edit-section, .add-section {
-	padding: 0 30px 0 0;
+	.edit-section,
+	.add-section {
+		padding: 0 30px 0 0;
+	}
 }
