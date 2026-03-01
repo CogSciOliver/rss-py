@@ -1,6 +1,8 @@
 // live_preview.js
 function linkInputToPreview(inputId, previewId) {
-	const input = document.getElementById(inputId);
+	// MUST CHNAGE TO CAPTURE CLASS OR ID OF THIS ACTIVE INPUTS AND PREVIEWS.
+	const input = this.getElementById(inputId);
+	// const input = document.getElementById(inputId);
 	const preview = document.getElementById(previewId);
 	if (input && preview) {
 		input.addEventListener("input", () => {

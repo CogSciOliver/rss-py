@@ -37,6 +37,9 @@ td:first-child {
 	background: #e2e5e7;
 	color: #555;
 }
+.up {
+	text-transform: uppercase;
+}
 
 td:last-child {
 	width: 65%;
