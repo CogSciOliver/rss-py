@@ -3,7 +3,7 @@
 		<meta charset="UTF-8" />
 		<title>Danii Oliver's RSS Editor</title>
 		<link rel="stylesheet" href="{{ url_for('static', filename='systems.css') }}" />
-		<script src="{{ url_for('static', filename='js/live_preview.js') }}"></script>
+		<script src="{{ url_for('static', filename='live-preview.js') }}"></script>
 	</head>
 	<body>
 		<h1>Edit RSS Feed</h1>
@@ -19,7 +19,10 @@
 				<table class="edit-table">
 					{% for field, value in item.items() %}
 					<tr>
-						<td><strong>{{ field }}</strong><br /><span id="{{ value }}_preview_{{ idx }}">{{ value }}</span></td>
+						<td>
+							<strong>{{ field }}</strong><br />
+							<span id="{{ value }}_preview_{{ idx }}">{{ value }}</span>
+						</td>
 						<td>
 							{% if field in ["description", "itunes:summary", "title"] %}
 							<textarea id="{{ field }}_input_{{ idx }}" name="{{ field }}">{{ value }}</textarea>

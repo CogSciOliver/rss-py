@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<title>Add New RSS Item</title>
 		<link rel="stylesheet" href="{{ url_for('static', filename='systems.css') }}" />
-		<script src="{{ url_for('static', filename='js/live_preview.js') }}"></script>
+		<script src="{{ url_for('static', filename='locked-changes.js') }}"></script>
 	</head>
 	<body>
 		<h1>Add New RSS Item</h1>
@@ -108,6 +108,7 @@
 						<td>iTunes Image Href (http:// or https://) Image Link</td>
 						<td>
 							<input
+								id="imgUrlInput"
 								type="text"
 								name="itunes:image"
 								value="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/30674591/30674591-1705711056966-43ec54217f94a.jpg"

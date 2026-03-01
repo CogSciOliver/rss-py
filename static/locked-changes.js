@@ -3,7 +3,7 @@ function attemptChange() {
 
     if (confirmation === "CHANGE") {
         // If the user types "CHANGE", remove the readonly attribute
-        document.getElementById("targetInput").removeAttribute("readonly");
+        document.getElementById("imgUrlInput").removeAttribute("readonly");
         alert("Input field is now enabled for editing.");
     } else {
         // If the input is incorrect or cancelled, the field remains readonly
