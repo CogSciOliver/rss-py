@@ -97,12 +97,13 @@ hr {
 
 .edit-button:hover {
 	background: linear-gradient(135deg, #7c3cff, #2b7cff);
+	text-shadow: 0 2px 5px rgba(53, 44, 44, 0.8);
 }
 
 .delete-button {
 	margin-right: 30px;
 	padding: 10px 18px;
-	background: linear-gradient(135deg, #e74c3c, #7c3cff);
+	background: linear-gradient(135deg, #e74c3c, #c0392b);
 	color: #fff;
 	border: none;
 	border-radius: 4px;
@@ -139,7 +140,7 @@ hr {
 	margin-bottom: 1rem;
 	margin-right: 30px;
 	padding: 10px 20px;
-	background: linear-gradient(135deg, #27ae60, #7c3cff);
+	background: linear-gradient(135deg, #2b7cff, #7c3cff);
 	color: #fff;
 	border: none;
 	border-radius: 4px;
@@ -148,7 +149,25 @@ hr {
 }
 
 .add-button:hover {
-	background: linear-gradient(135deg, #7c3cff, #27ae60);
+	background: linear-gradient(135deg, #7c3cff, #2b7cff);
+	text-shadow: 0 2px 5px rgba(53, 44, 44, 0.8);
+}
+
+.outline-button {
+	margin-bottom: 1rem;
+	margin-right: 30px;
+	padding: 8px 18px;
+	background: transparent;
+	color: #2b7cff;
+	border: 2px solid #2b7cff;
+	border-radius: 4px;
+	cursor: pointer;
+	float:right;
+}	
+
+.outline-button:hover {
+	background: #2b7cff;
+	color: #fff;
 	text-shadow: 0 2px 5px rgba(53, 44, 44, 0.8);
 }
 
