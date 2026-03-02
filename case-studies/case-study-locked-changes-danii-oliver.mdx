@@ -1,0 +1,187 @@
+#  Locked Changes Feature 🔐
+
+**Project Enhancement — RSS Editor**
+**Author:** Danii Oliver
+**Stack:** Python, Flask, Jinja2, JavaScript, XML (RSS Namespaces)
+**Tags:** Software Engineering, Flask, JavaScript, Python Development, UI, Defensive Programming
+
+<hr>
+
+## Summary 
+
+> Built a typed-confirmation safeguard system for an RSS editor to prevent accidental edits and deletions of namespaced metadata.
+>
+> Instead of relying on basic confirmation dialogs, users must explicitly type `CHANGE` or `DELETE` before sensitive operations execute.
+>
+> Preserved clean Flask route separation, decoupled all confirmation logic into a single JS module, and dynamically targeted fields using Jinja-generated IDs.
+>
+> Small feature — meaningful impact on reliability and user awareness.
+>
+> Good software protects users from unintended consequences.
+
+
+
+## 🚩 The Problem
+
+The RSS Editor allowed direct editing and deletion of feed items without safeguards.
+
+This created real risk:
+
+* Accidental deletion of published content
+* Silent corruption of namespaced metadata (`dc:*`, `itunes:*`)
+* Feed-breaking changes affecting downstream clients
+
+Standard browser `confirm()` dialogs are easily dismissed and offer minimal protection.
+
+The system needed a deliberate friction layer — without complicating backend architecture.
+
+
+
+## 🧠 The Solution
+
+I implemented a **typed-confirmation protection system** using decoupled JavaScript.
+
+Users must explicitly type:
+
+* `CHANGE` to unlock protected fields
+* `DELETE` to confirm item deletion
+
+This pattern introduces intentional pause before destructive actions — similar to safeguards used in repository deletion and database reset workflows.
+
+
+
+## 🏗 Architectural Approach
+
+### Backend Integrity Preserved
+
+Routes remain clean and separate:
+
+```
+/edit/<int:item_index>
+/delete/<int:item_index>
+```
+
+No route merging.
+No backend confirmation logic.
+No additional condition branching.
+
+Deletion is executed only after explicit frontend confirmation.
+
+
+
+### Dynamic Field Targeting
+
+Fields are generated dynamically in Jinja:
+
+```html
+{{ field }}_input_{{ idx }}
+{{ field }}_previewBox_{{ idx }}
+```
+
+Protected field example:
+
+```html
+{% if field == "image_url" %}
+<input
+    type="text"
+    id="{{ field }}_input_{{ idx }}"
+    name="{{ field }}"
+    value="{{ value }}"
+    readonly
+    onclick="attemptChange('{{ field }}_input_{{ idx }}', '{{ field }}_previewBox_{{ idx }}')"
+/>
+{% endif %}
+```
+
+This enables:
+
+* Precise DOM targeting
+* Scalable protection across dynamic fields
+* Safe handling of namespaced RSS metadata
+
+
+
+## 🔒 Feature 1: Protected Field Unlocking
+
+Sensitive fields render as `readonly`.
+
+Unlock Flow:
+
+1. User clicks the field
+2. Prompt requires `CHANGE` exactly
+3. If correct → `readonly` removed + visual highlight
+4. If incorrect → field remains locked
+
+```javascript
+function attemptChange(input, previewBox) {
+    var confirmation = prompt(
+        "To enable this input field, please type 'CHANGE' exactly:"
+    );
+
+    if (confirmation === "CHANGE") {
+        document.getElementById(input).removeAttribute("readonly");
+        document.getElementById(previewBox).style.backgroundColor = "#ffdddd";
+    }
+}
+```
+
+
+
+## 🗑 Feature 2: Typed Deletion Confirmation
+
+Delete button triggers a keyword verification step.
+
+```javascript
+function attemptDelete(idx, title) {
+    var delConfirmation = prompt(
+        "To confirm deletion of: \"" + title +
+        "\"\nPlease type DELETE exactly:"
+    );
+
+    if (delConfirmation === "DELETE") {
+        var form = document.createElement("form");
+        form.method = "post";
+        form.action = "/delete/" + idx;
+        document.body.appendChild(form);
+        form.submit();
+    }
+}
+```
+
+Deletion proceeds only after intentional confirmation.
+
+
+
+## 🛡 Engineering Decisions
+
+* Decoupled frontend safeguard layer
+* Preserved REST route clarity
+* Avoided backend complexity
+* Used dynamic ID construction for scalability
+* Introduced intentional UX friction for destructive actions
+
+
+
+## 📈 Skills Demonstrated
+
+* Defensive UI design
+* Dynamic DOM manipulation
+* Clean separation of concerns
+* Template-driven frontend architecture
+* Safe destructive action patterns
+* Namespaced XML awareness
+* Production-conscious UX thinking
+
+
+
+## 🏁 Outcome
+
+The RSS Editor evolved from a functional CRUD interface into a controlled editing environment.
+
+This enhancement demonstrates a shift from “working software” to **responsible software design** — protecting data integrity while maintaining architectural simplicity.
+
+
+
+
+
+

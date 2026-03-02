@@ -4,6 +4,7 @@
 		<title>Danii Oliver's RSS Editor</title>
 		<link rel="stylesheet" href="{{ url_for('static', filename='systems.css') }}" />
 		<script src="{{ url_for('static', filename='live-preview.js') }}"></script>
+		<script src="{{ url_for('static', filename='locked-changes.js') }}"></script>
 	</head>
 	<body>
 		<h1>Edit RSS Feed</h1>
@@ -19,13 +20,16 @@
 				<table class="edit-table">
 					{% for field, value in item.items() %}
 					<tr>
-						<td>
+						<td id="{{field}}_previewBox_{{idx}}">
 							<strong class="up">{{ field }}</strong><br />
 							<span id="{{ field }}_preview_{{ idx }}">{{ value }}</span>
 						</td>
-						<td>
+						<td id="{{field}}_editable_{{idx}}">
 							{% if field in ["description", "itunes:summary", "title"] %}
 							<textarea id="{{ field }}_input_{{ idx }}" name="{{ field }}">{{ value }}</textarea>
+							{% elif field == "itunes:image" or field == "dc:creator" %}
+							<input style="margin-bottom: 10px;" type="text" id="{{ field }}_input_{{ idx }}" name="{{ field }}" value="{{ value }}" readonly aria-readonly />
+							<button type="button" class="outline-button" onclick="attemptChange('{{ field }}_input_{{ idx }}', '{{ field }}_previewBox_{{ idx }}')"> &#9888;&nbsp;Change This Protected Field</button>
 							{% else %}
 							<input type="text" id="{{ field }}_input_{{ idx }}" name="{{ field }}" value="{{ value }}" />
 							{% endif %}
@@ -38,12 +42,49 @@
 			<!-- Save button -->
 			<button class="edit-button" type="submit">&check; &nbsp; Save Updates {{ idx+1 }}</button>
 		</form>
-
-		<!-- Delete button, points to separate route, MUST BE OUTSIDE OF EDIT FORM -->
-		<form method="post" action="/delete/{{ idx }}" style="display: inline">
-			<button class="delete-button" type="submit" onclick="return confirm('Are you sure you want to delete entry name: {{ item.get('title', 'Unknown') }} ?');">&#x2715; &nbsp; Delete Item {{ item.get('title', 'Unknown') }}</button>
-		</form>
+		<button class="delete-button" type="button" onclick="attemptDelete({{ idx }}, '{{ item.get('title', 'Unknown') }}')">&#x2715; &nbsp; Delete Item {{ item.get('title', 'Unknown') }}</button>
 		<hr />
 		{% endfor %}
 	</body>
 </html>
+{# decoupled the delete confirmation call for dynamic confirmation then action #}
+
+{# I need to add a confirmation step to change the img URL. I want to make sure that the user is aware that they are changing the image URL and that it will affect the feed's appearance. I will add a JavaScript function that prompts the user for confirmation before allowing them to change the image URL. If they confirm, the change will be made; if they cancel, the input will remain unchanged.
+First I need to identify the input field for the image URL in the HTML form and add the attribute readonly. Once I have that, I can add an event listener to that input field that triggers a confirmation dialog when the user tries to change the value. If the user confirms, the change will be allowed by js removing the readonly attribute and highlighting to indicate the input field is being edited; if they cancel, the input will remain unchanged and the readonly attribute will stay in place. This way, the user is explicitly aware that they are making a change to the image URL and can make an informed decision about whether to proceed or not.
+
+how do I add this feature to the dynamic form?To add a confirmation step for changing the image URL in your dynamic form, you can follow these steps:	
+1. Identify the input field for the image URL in your HTML form. It might look something like this:
+No imputs are hardcded in the template, so you will need to add a condition to check if the current field is the image URL field. For example, if your image URL field is named "image_url", you can modify your template like this:
+```html
+{% if field == "image_url" %}
+<input type="text" id="{{ field }}_input_{{ idx }}" name="{{ field }}" value="{{ value }}" readonly />
+{% else %}
+<input type="text" id="{{ field }}_input_{{ idx }}" name="{{ field }}" value="{{ value }}" />
+{% endif %}
+```
+2. Add a JavaScript function that listens for changes to the image URL input field and prompts the user for confirmation. You can add this function in your existing `locked-changes.js` file:
+```javascriptdocument.addEventListener("DOMContentLoaded", function() {
+	const imageUrlInputs = document.querySelectorAll("input[name='image_url']");
+	imageUrlInputs.forEach(function(input) {
+		input.addEventListener("click", function() {
+			if (input.hasAttribute("readonly")) {
+				const confirmChange = confirm("Are you sure you want to change the image URL? This will affect how your feed appears.");
+				if (confirmChange) {
+					input.removeAttribute("readonly");
+					input.style.backgroundColor = "#ffdddd"; // Highlight the input to indicate it's being edited
+				} else {
+					// If the user cancels, keep the input readonly and unchanged
+					input.value = input.getAttribute("value"); // Reset to original value
+				}
+			}
+		});
+	});
+});
+```
+3. Make sure to include the `locked-changes.js` script in your HTML template if it's not already included:
+```html<script src="{{ url_for('static', filename='locked-changes.js') }}"></script>
+```	 #}
+
+
+{# TECHNICAL EDITS & SKILLS #}
+{# building string concatenations to target element ids based on field and index with unique identifiers like {{ field }}_box_{{ idx }}	 or 	_preview or _input to add dynamic functionality such as locked changes that are readonly and can be unlocked and UI indicators that changes to protected fields are being made.  #}

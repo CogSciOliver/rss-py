@@ -62,6 +62,14 @@ textarea {
 	resize: vertical;
 }
 
+input:read-only, 
+textarea:read-only {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+  cursor: not-allowed; /* Shows a 'no' cursor */
+  color: #666;
+}
+
 hr {
 	border: none;
 	border-bottom: 1px solid #ddd;
