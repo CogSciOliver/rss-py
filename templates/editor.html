@@ -21,13 +21,13 @@
 					{% for field, value in item.items() %}
 					<tr>
 						<td id="{{field}}_previewBox_{{idx}}">
-							<strong class="up">{{ field }}</strong><br />
+							<h3 class="up">{{ field }}</h3>
 							<span id="{{ field }}_preview_{{ idx }}">{{ value }}</span>
 						</td>
 						<td id="{{field}}_editable_{{idx}}">
 							{% if field in ["description", "itunes:summary", "title"] %}
 							<textarea id="{{ field }}_input_{{ idx }}" name="{{ field }}">{{ value }}</textarea>
-							{% elif field == "itunes:image" or field == "dc:creator" %}
+							{% elif field in ["link", "enclosure_url", "enclosure_length", "enclosure_type", "itunes:image", "dc:creator", "guid"] %}
 							<span style="float: right;" id="{{ field }}_lock_{{ idx }}">&#x1f512;</span>
 							<input style="margin-bottom: 10px;" type="text" id="{{ field }}_input_{{ idx }}" name="{{ field }}" value="{{ value }}" readonly aria-readonly />
 							<button type="button" class="outline-button" 

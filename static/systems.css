@@ -24,6 +24,10 @@ h2 {
 	color: var(--dark-text);
 	margin-bottom: 20px;
 }
+h3 {
+	color: var(--dark-text);
+	margin-bottom: 5px;
+}
 
 table {
 	border-collapse: collapse;
@@ -49,7 +53,8 @@ td:first-child {
 	color: var(--medium-text);
 }
 .up {
-	text-transform: uppercase;
+	text-transform: capitalize;
+	letter-spacing: 0.03em;
 }
 
 td:last-child {
@@ -154,6 +159,7 @@ hr {
 	text-shadow: 0 2px 5px rgba(53, 44, 44, 0.8);
 }
 
+/* ========== GLOBAL UI STYLES ========== */
 .outline-button {
 	margin-bottom: 1rem;
 	/* margin-right: 30px; */
