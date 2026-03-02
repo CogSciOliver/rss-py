@@ -20,6 +20,16 @@ def load_rss():
     root = tree.getroot()
     channel = root.find("channel")
     items = []
+    feed = []
+
+    for feed_elem in channel:
+        tag = feed_elem.tag
+        if tag == "title":
+            feed.append(("Feed Title", feed_elem.text or ""))
+        elif tag == "link":
+            feed.append(("Feed Link", feed_elem.text or ""))
+        elif tag == "description":
+            feed.append(("Feed Description", feed_elem.text or ""))
 
     for item_elem in channel.findall("item"):
         item = {}
@@ -42,13 +52,21 @@ def load_rss():
                 item[tag] = child.text or ''
         items.append(item)
 
-    return tree, channel, items
+    return tree, channel, items, feed
 
 # --- Index page: show all items ---
 @app.route("/")
 def index():
-    _, _, items = load_rss()
-    return render_template("editor.html", items=list(enumerate(items)))
+    tree, channel, items, feed = load_rss()
+    items_enum = list(enumerate(items))
+    item_count = len(items)  # count of RSS items
+    
+    items_enum = []
+    for idx, item in enumerate(items):
+        episode_number = item_count - idx
+        items_enum.append((idx, item, episode_number))
+    
+    return render_template("editor.html", items=items_enum, item_count=item_count, feed=feed)
 
 # --- Edit existing item ---
 @app.route("/edit/<int:item_index>", methods=["GET", "POST"])

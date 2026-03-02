@@ -81,7 +81,7 @@ textarea {
 input:read-only, 
 textarea:read-only {
   background-color: var(--light-text);
-  border-color: var(--dark-text)
+  border-color: var(--dark-text);
   cursor: not-allowed; /* Shows a 'no' cursor */
   color: var(--bright-text);
 }
@@ -162,7 +162,6 @@ hr {
 /* ========== GLOBAL UI STYLES ========== */
 .outline-button {
 	margin-bottom: 1rem;
-	/* margin-right: 30px; */
 	padding: 8px 18px;
 	background: transparent;
 	color: #2b7cff;
@@ -170,6 +169,17 @@ hr {
 	border-radius: 4px;
 	cursor: pointer;
 	float: right;
+}
+
+.outline-link {
+	margin-bottom: 1rem;
+	padding: 8px 18px;
+	background: transparent;
+	color: #2b7cff;
+	border: 2px solid #2b7cff;
+	border-radius: 4px;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .outline-button:hover {
