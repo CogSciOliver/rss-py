@@ -28,8 +28,11 @@
 							{% if field in ["description", "itunes:summary", "title"] %}
 							<textarea id="{{ field }}_input_{{ idx }}" name="{{ field }}">{{ value }}</textarea>
 							{% elif field == "itunes:image" or field == "dc:creator" %}
+							<span style="float: right;" id="{{ field }}_lock_{{ idx }}">&#x1f512;</span>
 							<input style="margin-bottom: 10px;" type="text" id="{{ field }}_input_{{ idx }}" name="{{ field }}" value="{{ value }}" readonly aria-readonly />
-							<button type="button" class="outline-button" onclick="attemptChange('{{ field }}_input_{{ idx }}', '{{ field }}_previewBox_{{ idx }}')"> &#9888;&nbsp;Change This Protected Field</button>
+							<button type="button" class="outline-button" 
+							onclick="attemptChange('{{ field }}_input_{{ idx }}', '{{ field }}_previewBox_{{ idx }}', '{{ field }}_lock_{{ idx }}')"> 
+							&#9888; &nbsp;Change This Protected Field</button>
 							{% else %}
 							<input type="text" id="{{ field }}_input_{{ idx }}" name="{{ field }}" value="{{ value }}" />
 							{% endif %}

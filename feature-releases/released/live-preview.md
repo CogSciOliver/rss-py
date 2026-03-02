@@ -1,5 +1,9 @@
 # Architecture Notes — Live Preview System
 
+**Last Updated:** 03.02.2026
+**Author:** Danii Oliver, Software Engineer
+* * * * *
+
 ## Design Philosophy
 
 The live preview feature was intentionally designed to be:

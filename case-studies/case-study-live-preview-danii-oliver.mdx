@@ -1,0 +1,185 @@
+# Live Preview Feature for RSS Editor
+
+**Project Enhancement — RSS Editor**
+**Feature Enhancement — Attempt Change Confirmation**
+**Author:** Danii Oliver
+**Stack:** Python, Flask, Jinja2, JavaScript, XML (RSS Namespaces)
+**Tags:** Software Engineering, Flask, JavaScript, Python Development, UI, Defensive Programming
+
+
+
+## Project Context
+
+In the RSS Editor, users often edit multiple fields for each feed item. To improve usability and reduce errors, we needed a **real-time preview system** to reflect changes immediately without saving or reloading.
+
+This live preview allows users to:
+
+* See changes to `title`, `description`, `itunes:*` tags, or other RSS metadata instantly.
+* Validate formatting and content as they type.
+* Avoid repeated save-refresh cycles for minor edits.
+
+
+
+## Problem Statement
+
+### Without live preview:
+
+* Users must submit changes to see effects.
+* Mistakes or formatting issues are only visible post-save.
+* Workflow is inefficient for editing multiple items.
+
+We needed a lightweight, decoupled frontend solution that **works with dynamic template-generated IDs** and doesn't alter backend logic.
+
+
+
+## Solution Overview
+
+### A **JavaScript-driven live preview** system:
+
+1. Listens for `input` events on all form fields matching `_input_` IDs.
+2. Dynamically updates the corresponding `_preview_` element for immediate feedback.
+3. Works for all dynamically generated fields, including namespaced RSS tags.
+4. Fully decoupled from backend routes (`/edit` and `/add_item`).
+
+
+
+## Architecture
+
+### Backend (Flask)
+
+No changes are required to existing Flask routes. The live preview system operates entirely on the frontend.
+
+The backend continues to handle:
+
+* `/edit/<int:item_index>`: save changes to XML.
+* `/add_item`: add new feed items.
+* `/delete/<int:item_index>`: delete feed items.
+
+
+
+### Frontend (Dynamic Template)
+
+Each input field has a **unique ID** combining the field name and index:
+
+```html
+id="{{ field }}_input_{{ idx }}"
+id="{{ field }}_preview_{{ idx }}"
+```
+
+This enables JS to reliably target the correct preview element for each input.
+
+
+
+## Feature: Live Input Preview
+
+### Goal
+
+Provide instant visual feedback for edits to RSS item fields.
+
+### Flow
+
+1. User types in an input or textarea field.
+2. JavaScript detects the `input` event.
+3. Corresponding preview element updates **in real-time** with the current field value.
+
+
+
+## Implementation
+
+### JavaScript (`live-preview.js`)
+
+```javascript
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("[id*='_input_']").forEach((input) => {
+        input.addEventListener("input", function () {
+            const preview = document.getElementById(this.id.replace("_input_", "_preview_"));
+            if (preview) {
+                preview.textContent = this.value;
+            }
+        });
+    });
+});
+```
+
+* Dynamically targets all `_input_` fields.
+* Automatically maps to `_preview_` elements.
+* Works for any dynamic index or field name.
+* Fully decoupled: no backend changes needed.
+
+
+
+## HTML Template Integration
+
+Example snippet from `editor.html`:
+
+```html
+<td>
+    <strong>{{ field }}</strong><br />
+    <span id="{{ field }}_preview_{{ idx }}"></span>{{ value }}
+</td>
+<td>
+    {% if field in ['description', 'itunes:summary', 'title'] %}
+    <textarea
+        id="{{ field }}_input_{{ idx }}"
+        name="{{ field }}"
+    >{{ value }}</textarea>
+    {% else %}
+    <input
+        type="text"
+        id="{{ field }}_input_{{ idx }}"
+        name="{{ field }}"
+        value="{{ value }}"
+    />
+    {% endif %}
+</td>
+```
+
+* Preview is automatically synced with input.
+* Supports all fields dynamically generated in the loop.
+
+
+
+## Key Engineering Decisions
+
+1. **Decoupled Frontend Logic**
+
+   * Works independently of Flask routes.
+   * Does not interfere with edit, add, or delete operations.
+
+2. **Dynamic ID Mapping**
+
+   * Combines `field` and `idx` to uniquely identify elements.
+   * Eliminates hardcoded IDs.
+
+3. **Lightweight Implementation**
+
+   * Vanilla JS only.
+   * No libraries required.
+
+
+
+## Skills Demonstrated
+
+* DOM event handling
+* Dynamic ID mapping
+* Real-time UI updates
+* Decoupled frontend engineering
+* User-focused UX improvement
+* Template-driven dynamic forms
+
+
+
+## Future Enhancements
+
+* Highlight changes visually as they occur.
+* Show character count or RSS-safe validation in live preview.
+* Sync preview with image URLs or media previews.
+* Integrate with `attemptChange()` for locked fields.
+
+
+
+## Conclusion
+
+The Live Preview feature improves usability by providing **instant visual feedback**, reducing the likelihood of errors, and enabling more efficient RSS item management.
+
+This complements the Locked Changes feature, creating a more robust, user-aware editing environment for the RSS Editor.

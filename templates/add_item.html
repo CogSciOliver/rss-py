@@ -40,8 +40,9 @@
 					<tr>
 						<td id="dc:creator_previewBox">Podcast Episode Creator</td>
 						<td>
+							<span style="float: right;" id="dc:creator_lock">&#x1f512;</span>
 							<input type="text" style="margin-bottom: 10px;" id="dc:creator" name="dc:creator" value="Unschool Pages of Our Lives, Danii Oliver" readonly aria-readonly="true" />
-							<button type="button" class="outline-button" onclick="attemptChange('dc:creator','dc:creator_previewBox')">Change Default Creator</button>
+							<button type="button" class="outline-button" onclick="attemptChange('dc:creator','dc:creator_previewBox', 'dc:creator_lock')">&#9888;&nbsp;Change Default Creator</button>
 						</td>
 					</tr>
 					<tr>
@@ -109,6 +110,7 @@
 					<tr>
 						<td id="itunes:image_previewBox">Episode or Podcast Image URL<br><i> (http:// or https://) Image Link (.jpeg, .avif, .png, .webp)</i></td>
 						<td>
+							<span style="float: right;" id="itunes:image_lock">&#x1f512;</span>
 							<input
 								id="itunes:image"
 								type="text"
@@ -123,7 +125,7 @@
 							<!-- Create a confirmation requiring the user to type "CHANGE" to unlock the default image URL, but if the user clicks "cancel" the default URL will remain in place. -->
 							<!-- This allows the user to easily add a custom image URL if desired, while also providing a default image for convenience. -->
 							<!-- The confirmation prompt helps prevent accidental changes to the default image URL, which is important since the image is a required field for the RSS feed and can affect how the episode is displayed in podcast directories. -->
-							<button type="button" class="outline-button" onclick="attemptChange('itunes:image', 'itunes:image_previewBox')">Change Default Image URL</button>
+							<button type="button" class="outline-button" onclick="attemptChange('itunes:image', 'itunes:image_previewBox', 'itunes:image_lock')">&#9888;&nbsp;Change Default Image URL</button>
 						</td>
 					</tr>
 				</table>

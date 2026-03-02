@@ -1,21 +1,17 @@
 // JavaScript for handling locked input fields and delete confirmations
 //locked-changes.js
 
-function attemptChange(input, previewBox) {
+function attemptChange(input, previewBox, lockIcon) {
     var confirmation = prompt("To enable this input field, please type 'CHANGE' exactly:");
 
     if (confirmation === "CHANGE") {
-        // If the user types "CHANGE", remove the readonly attribute
+        // If the user types "CHANGE", remove the readonly attribute and the lock
         document.getElementById(input).removeAttribute("readonly"); 
         document.getElementById(input).removeAttribute("aria-readonly"); 
+        document.getElementById(lockIcon).style.display = "none"; // Hide the lock icon
         document.getElementById(previewBox).style.backgroundColor = "#ffdddd"; // Highlight the input to indicate it's being edited
-        //this needs to be updated to target the correct input field based on the idx parameter which can be concatenated with the field name to form the correct ID of the input element. 
-        // For example, if the field is "itunes:image" and idx is 0, the ID would be "itunes:image_input_0". 
-        //or it can have no concatenation if the idx is already included in the field name, so it would just be idx.
-
-        // for document.getElementById(`_preview_${idx}`).style.backgroundColor = "#ffdddd"; 
-        // it needs to target the correct preview element as well, which would be `_preview_${idx}` if the idx is included in the field name, or it would need to be updated to target the correct preview element based on the idx parameter.
-        // the filed name can be extracted from the idx parameter by splitting it at the "_input_" substring and taking the first part, which would give the field name. Then the preview element can be targeted using that field name and the idx parameter to form the correct ID of the preview element, which would be `${field}_preview_${idx}`.
+        document.getElementById(previewBox).style.border = "2px solid #ff0000"; // Add a red border to indicate it's being edited
+        
 
         alert("Input field is now enabled for editing.");
     } else {
