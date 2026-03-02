@@ -87,3 +87,10 @@ Fixed with
 **notes**
 Now have a list and links to jump to
 NEW FEATURE RELEASE: "Jump To Item" only one part of jump to with id number no dynamics yet  v26.03.02-04:43
+
+{# #  Planned Feature functionality = Done 
+- ✔ get item count ✔ 
+- ✔ get episode number (not listed but in order of feed for when items are deleted and reordering happens)
+- ✔ get  episode number in the edit section header and the episode list section at the top of the page, with links to each episode in the edit section.
+# create sorting logic to display episode numbers in reverse order (oldest first) and update the edit section headers and episode list accordingly.
+# create search functionality to filter episodes by title or search words within a description or summary, and update the episode list and edit sections to reflect search results. #}
